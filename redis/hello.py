@@ -34,7 +34,7 @@ def add_Anime():
     episode = request.json['episode']#insert ข้อมูล id
     user = {"ID":id, "name":name, "episode":episode}#ให้ตัวแปร user เก็บค่า id,name,episode
     db.hmset(name,user)#ส่งตัวแปร user ไปเพิ่ม databass
-    return 'เพิ่มข้อมูลเรียบร้อย!!!'#
+    return 'เพิ่มข้อมูลเรียบร้อย!!!'#return ข้อความว่า 'เพิ่มข้อมูลเรียบร้อย!!!'
 
 #อัพเดทข้อมูลในตาราง
 @app.route('/<Key>', methods=['PUT'])
@@ -44,7 +44,7 @@ def update_Anime(Key):
     episode = request.json['episode']#แก้ไขข้อมูลให้กับตัวแปร episode
     user = {"ID":id, "name":name, "episode":episode}#ให้ตัวแปร user เก็บค่า id,name,episode
     db.hmset(name,user)#ส่งตัวแปร user ขึ้น databass โดยอ้างอิงจาก name
-    return 'อัพเดทข้อมูลเรียบร้อย!!!'#
+    return 'อัพเดทข้อมูลเรียบร้อย!!!'#return ข้อความว่า 'อัพเดทข้อมูลเรียบร้อย!!!'
 
 #ลบข้อมูล
 @app.route('/<Key>', methods=['DELETE'])
