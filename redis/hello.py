@@ -22,8 +22,8 @@ def Show_Animeall():
 
 #แสดง1ข้อมูลทั้งหมดใน Databass
 @app.route('/<Key>', methods=['GET'])
-def Show_Anime(id):
-    name = db.hgetall(id)#เพิ่มข้อมูลลงในตัวแปรที่ชื่อ req ลงใน databass
+def Show_Anime(key):
+    name = db.hgetall(key)#เพิ่มข้อมูลลงในตัวแปรที่ชื่อ req ลงใน databass
     return jsonify(name)#ส่งค่าจากตัวแปร req
 
 #เพิ่มข้อมูลในDatabass
