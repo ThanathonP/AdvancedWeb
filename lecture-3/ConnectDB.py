@@ -4,7 +4,7 @@ try:
                                 password="HBVgsc17776",
                                 host="node8589-advweb-15.app.ruk-com.cloud",
                                 port="11097",
-                                database="cloudDB")
+                                database="Animes")
 
     cursor = connection.cursor()
     #print PostgreSQL Connection properties
